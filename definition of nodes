@@ -1,0 +1,27 @@
+class Node:
+    def _init_(self, data):
+        self.data = data        # Store the value of the node
+        self.left = None        # Pointer to the left child node
+        self.right = None       # Pointer to the right child node
+
+# Example of using the Node class
+if _name_ == "_main_":
+    # Create the root node
+    root = Node(1)
+    
+    # Create left and right children
+    root.left = Node(2)
+    root.right = Node(3)
+    
+    # Add more nodes
+    root.left.left = Node(4)
+    root.left.right = Node(5)
+    root.right.left = Node(6)
+    root.right.right = Node(7)
+    
+    # The tree now looks like this:
+    #       1
+    #      / \
+    #     2   3
+    #    / \ / \
+    #   4  5 6  7
